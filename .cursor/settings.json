@@ -1,0 +1,98 @@
+{
+    "cursor.userRules": {
+      "projectSpecific": {
+        "techStackEnforcement": {
+          "description": "Enforce consistent use of our approved tech stack",
+          "rules": [
+            "Always use TypeScript over JavaScript",
+            "Prefer Tailwind CSS utility classes over custom CSS",
+            "Use ShadCN UI components instead of raw HTML elements",
+            "Sanity CMS schemas must use TypeScript types",
+            "Next.js 14 App Router is mandatory"
+          ]
+        },
+        "codeStructure": {
+          "description": "Maintain our project architecture standards",
+          "rules": [
+            "Components must be in /components with PascalCase naming",
+            "API routes go in /app/api with proper TypeScript interfaces",
+            "All CMS queries must be in /lib/sanity",
+            "Utility functions belong in /lib/utils",
+            "Never use 'any' type - always define proper interfaces"
+          ]
+        },
+        "performanceOptimizations": {
+          "description": "Apply news platform specific optimizations",
+          "rules": [
+            "Images must use Next.js Image component with sizes prop",
+            "Lazy load all non-critical components",
+            "Implement ISR for article pages with 60s revalidation",
+            "Use edge runtime for API routes when possible",
+            "Cache Sanity queries with Redis pattern"
+          ]
+        },
+        "localDevelopment": {
+          "description": "XAMPP-specific development rules",
+          "rules": [
+            "All paths must work with Windows/D:\xampp structure",
+            "Include SSL workarounds for local dev",
+            "Provide phpMyAdmin import instructions",
+            "Account for XAMPP's PHP 8.1+ features",
+            "Include hosts file modification steps"
+          ]
+        },
+        "contentModeling": {
+          "description": "Sanity CMS content structure rules",
+          "rules": [
+            "Articles must have SEO metadata fields",
+            "Authors require bio and image fields",
+            "Categories support hierarchical structure",
+            "Media assets use Sanity's image pipeline",
+            "All fields need validation rules"
+          ]
+        },
+        "security": {
+          "description": "Security requirements for news platform",
+          "rules": [
+            "Never hardcode API keys - use environment variables",
+            "Implement CSRF protection for forms",
+            "Sanitize all CMS content output",
+            "Use NextAuth.js for authentication",
+            "Enable CORS only for trusted domains"
+          ]
+        }
+      },
+      "codeQuality": {
+        "documentation": {
+          "description": "Ensure maintainable code",
+          "rules": [
+            "JSDoc comments for all complex functions",
+            "TypeScript interfaces for all API responses",
+            "Component props must be typed",
+            "Include error handling examples",
+            "Document all CMS field definitions"
+          ]
+        },
+        "testing": {
+          "description": "Testing requirements",
+          "rules": [
+            "Unit tests for utility functions",
+            "Integration tests for critical user flows",
+            "Snapshot tests for UI components",
+            "End-to-end tests for article reading flow",
+            "CMS schema validation tests"
+          ]
+        }
+      },
+      "deployment": {
+        "description": "Vercel deployment standards",
+        "rules": [
+          "Include vercel.json configuration",
+          "Document all required environment variables",
+          "Implement proper caching headers",
+          "Configure ISR fallback behavior",
+          "Include health check endpoints"
+        ]
+      }
+    }
+  }
